@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QRify - QR Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>QRify: Your Instant QR Code Solution</h1>
+    <p>Transform your links into scannable art!</p>
+  </header>
+
+  <main>
+    <div class="single-card">
+      <!-- Left Section: Input Form -->
+      <section class="input-section">
+        <form id="qr-form" onsubmit="handleGenerateButton(event)">
+          <div class="container">
+            <input required type="text" name="text" class="input" id="url-input" placeholder="Enter your URL">
+          </div>
+          <div class="customization">
+            <label for="color">Foreground Color:</label>
+            <input type="color" name="color" id="color" value="#000000">
+            <label for="bgColor">Background Color:</label>
+            <input type="color" name="bgColor" id="bgColor" value="#ffffff">
+          </div>
+          <div class="logo-upload-container">
+            <label for="logoUpload" class="upload-label">Upload Logo:</label>
+            <input type="file" id="logoUpload" class="file-input" accept="image/*">
+            <label for="logoUpload" class="upload-btn">Choose File</label>
+            <label class="toggle-label" id="toggleContainer" style="display: none;">
+              <input type="checkbox" class="toggle-input" id="cancel-btn" onchange="clearLogo()">
+              <div class="toggle-slider"></div>
+            </label>
+          </div>
+          <div class="caption-input">
+            <input type="text" id="qr-caption" placeholder="Enter caption (optional)" />
+          </div>
+          <button type="submit" class="btn">Generate QR CODE</button>
+        </form>
+      </section>
+
+      <!-- Right Section: QR Code Preview -->
+      <section id="qr-preview" class="qr-section">
+        <h2>Your QR Code:</h2>
+        <canvas id="qr-canvas" style="display: none;"></canvas>
+        <div id="qr-output">
+          <p>Enter a URL to generate your QR code.</p>
+        </div>
+        <button id="download-btn" class="button" style="display: none;">
+          <span class="button_lg">
+            <span class="button_sl"></span>
+            <span class="button_text">Download Now</span>
+          </span>
+        </button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2024 QRify. Built with ❤️ by Tapan.
+  </footer>
+
+       <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,894 @@
+body {
+  background-color: #0d1117;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Or other abstract patterns */
+  background-repeat: repeat;
+}
+
+
+/* Button General Styles */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border: 2px solid #38046e;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  margin: 0; /* Remove any outside space */
+}
+
+.button {
+  margin: 0; /* Remove margin around the button */
+  padding: 0; /* Adjust padding if needed */
+  position: relative;
+  display: inline-block;
+}
+
+/* From Uiverse.io by mrhyddenn */
+.button_lg {
+  margin: 0; /* Ensure no surrounding margin exists */
+}
+
+main, .input-section {
+  padding: 0; /* Reduce any extra padding */
+  margin: 1rem; /* Reset unwanted margins */
+}
+
+/* Remove the margin-bottom around the .button */
+.button {
+  margin-bottom: 0; /* No unnecessary space below */
+}
+
+/* From Uiverse.io by mrhyddenn */ 
+.button {
+  width: 200px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #fefeff;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #ff4655;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+/* Input Section */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  padding-bottom: 0px;
+}
+
+.input-section {
+  width: 80%;
+  max-width: 600px;
+  margin: 1rem 0;
+  text-align: center; /* Align center */
+}
+
+input[type="url"],
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="url"] {
+  border: 1px solid #ccc;
+}
+
+input[type="url"]:focus {
+  border-color: #000000;
+}
+
+#qr-preview {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#qr-output img {
+  max-width: 250px;
+  margin: 1rem auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/* From Uiverse.io by ShrinilDhorda */ 
+.btn {
+  margin-top: 15px;
+  width: 500px;
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+.btn:active {
+  scale: 0.92;
+}
+
+.btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
+
+/* From Uiverse.io by AmIt-DasIT */ 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  color: rgb(14, 14, 14);
+  margin: 20px;
+  align-items: center; /* Center-align input container */
+  width: 500px;
+  margin-left: 0px;
+}
+
+.container .label {
+  font-size: 20px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+  pointer-events: none;
+  color: black;
+}
+
+.input {
+  margin-top: 4px;
+  width: 500px;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+  color: #fff;
+}
+
+.container .input:valid,
+.container .input:focus {
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+
+header {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  background: linear-gradient(90deg, #050899, #25eafc, #114ccb); /* Gradient colors */
+  background-size: 300% 100%; /* Make the gradient larger for animation */
+  animation: gradientAnimation 8s infinite; /* Apply the animation */
+  height: 100px;
+  padding-bottom: 3rem;
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  50% {
+    background-position: 100% 50%; /* Middle position */
+  }
+  100% {
+    background-position: 0% 50%; /* End position (loops back) */
+  }
+}
+#qr-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  color: rgb(14, 14, 14);
+  margin: 20px;
+  align-items: center; /* Center-align input container */
+  width: 500px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#qr-caption:focus {
+  border: 2px solid transparent;
+  color: #1c1c1c;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+h2 {
+  color: white;
+  display: block;
+  font-size: 3em;
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+p {
+  color: #fefeff;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  size: 2em;
+}
+label {
+  color: #fefeff;
+  cursor: default;
+  font-size: 20px;
+}
+/* Default style for the input field */
+#url-input {
+  color: black; /* Typed text will be black */
+  background-color: white; /* Input background color */
+  box-shadow: #060606;
+}
+
+/* Placeholder style when active (focused) */
+#url-input:focus + .label {
+  color: white; /* Change placeholder text to white when active */
+  box-shadow: #060606;
+}
+
+/* Default label style */
+.label {
+  color: white; /* Placeholder text color */
+  position: absolute; /* Ensure label moves as needed */
+  transition: 0.3s; /* Smooth animation (if any) */
+}
+header h1 {
+  font-size: 2.5em;
+  font-weight: 1000;
+  margin-top: 7px;
+}
+header p {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+form {
+  display: block;
+  margin-top: 0.5rem;
+  unicode-bidi: isolate;
+  margin-bottom: 2em;
+}
+/* Glassmorphism Card */
+.glass-card {
+  width: 1100px;
+  height:40px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blurring the background */
+  -webkit-backdrop-filter: blur(10px); /* Compatibility with WebKit browsers */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border to match glass effect */
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 100%;
+  max-height: 80%;
+  text-align: center;
+  color: white; /* Ensure text is visible */
+  margin-top: 1rem;
+}
+/* Single Card Container */
+.single-card {
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%; /* Card width */
+  margin-top: 2rem auto; /* Center the card */
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  gap: 2rem;
+  padding-top: 0px;
+}
+
+
+
+/* Right Section */
+.qr-section {
+  width: 50%; /* QR Code preview occupies half the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* QR Output */
+#qr-output img {
+  max-width: 200px;
+  margin: 1rem 0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .single-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .input-section,
+  .qr-section {
+    width: 100%; /* Take full width on smaller screens */
+  }
+}
+/* Adjust container for responsiveness */
+.single-card {
+  height: auto; /* Remove fixed height */
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for better fit */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Reduce gap for compactness */
+  padding: 1rem; /* Reduce padding */
+  margin: 1rem auto; /* Adjust margin */
+}
+
+/* Resize input section */
+.input-section {
+  width: 45%; /* Adjust width for better fit */
+  padding: 0.5rem; /* Reduce padding */
+  display: flex;
+  flex-direction: column; /* Stack input and button */
+  gap: 0.5rem; /* Add spacing between input and button */
+  margin-top: 5px;
+}
+
+/* Resize QR section */
+.qr-section {
+  width: 45%; /* Adjust width for better fit */
+}
+
+/* Resize QR code preview */
+#qr-output img {
+  max-width: 150px; /* Reduce QR code size */
+  margin: 0.5rem 0; /* Adjust margin */
+}
+
+/* Ensure Generate button matches input size */
+input[type="text"], button.generate-btn {
+  width: 100%; /* Match widths */
+  padding: 0.8rem; /* Match padding */
+  font-size: 1rem; /* Match font size */
+  border: 1px solid #ccc; /* Add border to inputs for consistency */
+  border-radius: 0.25rem; /* Ensure consistent rounding */
+  box-sizing: border-box;
+  width: 500px;
+  
+}
+
+/* Style for the Generate button */
+button.generate-btn {
+  background-color: #007bff; /* Highlight button */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.generate-btn:hover {
+  background-color: #0056b3; /* Darker hover effect */
+}
+
+/* Adjust footer */
+footer {
+  position: absolute; /* Pin footer to the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 0.8rem; /* Reduce font size */
+  text-align: center;
+}
+
+/* Ensure header and card stay within view */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+}
+
+header, .single-card, footer {
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.single-card {
+  flex-grow: 1; /* Allow card to expand */
+  overflow: auto; /* Handle overflow within card */
+}
+#qr-output img {
+  max-width: 150px;
+  margin: 0.5rem 0;
+  width: 175px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5px;
+  margin-top: 0rem;
+}
+/* Add animation for QR code */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#qr-output img {
+  animation: zoomIn 0.5s ease-in-out;
+}
+.custom-logo {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.custom-logo label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.custom-logo input[type="file"] {
+  padding: 5px;
+}
+#qr-container canvas {
+  border-radius: 12px; /* Adjust this value for smoother rounding */
+}
+canvas {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  margin: 10px;
+  size: 50px;
+}
+#qr-container canvas {
+  border-radius: 10px; /* Adjust for smooth rounding */
+  background: #ffffff; /* Ensure consistent white background */
+  padding: 8px;       /* Adjust padding to maintain consistency */
+}
+/* Container for label and file input */
+.logo-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between label and button */
+  margin-top: 15px; /* Add spacing from other elements */
+  margin-bottom: 15px ;
+}
+
+/* Styling the label */
+.upload-label {
+  font-size: 23px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling the file input button */
+.file-input {
+  display: none; /* Hide the default file input */
+}
+
+/* Custom button for file input */
+.upload-btn {
+  width: 150px;
+  display: inline-block;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+.upload-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide the default input and link it to the button */
+.file-input + .upload-btn {
+  display: inline-block;
+}
+
+.file-input:focus + .upload-btn {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+/* Toggle Button Styles */
+.toggle-label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.toggle-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.toggle-slider {
+  width: 35px;
+  height: 35px;
+  background-color: #3be0f6; /* Default color (blue-500) */
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #060606;
+}
+
+.toggle-slider::after {
+  content: "✖️"; /* Default icon */
+  transition: transform 0.2s ease;
+}
+
+
+/* Hover Effect */
+.toggle-slider:hover {
+  background-color: #2563eb; /* Hover color (blue-600) */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.toggle-input:checked + .toggle-slider:hover {
+  background-color: #059669; /* Hover color for checked state (emerald-600) */
+}
+.upload-btn {
+  width: 150px;
+  display: inline-block;
+  background: linear-gradient(90deg, #6a11cb, #2575fc); /* Default color */
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* New color on hover */
+  transform: translateY(-3px); /* Slight upward shift on hover */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+  color: #060606;
+}
+
+.upload-btn:hover span.button_text {
+  content: "Processing..."; /* Change text on hover */
+  font-size: 16px; /* Adjust font size for hover text */
+}
+.single-card {
+  flex-grow: 1;
+  overflow: auto;
+  padding-top: 0px;
+  margin-bottom: 20px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff; /* Text color */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 15px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  z-index: 1000; /* Ensures it's above other content */
+}
+
+/* General Body Styling */
+body {
+  background-color: #0d1117;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Glassmorphism Card */
+.single-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  gap: 1.5rem;
+  padding-top: 0rem;
+}
+
+/* Input Section */
+.input-section {
+  width: 45%; /* Occupy less space for larger screens */
+  text-align: center;
+}
+
+.input-section input[type="url"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* QR Code Section */
+.qr-section {
+  width: 45%;
+  text-align: center;
+}
+
+#qr-output img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  background: linear-gradient(90deg, #050899, #25eafc, #114ccb); /* Gradient colors */
+  background-size: 300% 100%; /* Make the gradient larger for animation */
+  animation: gradientAnimation 8s infinite; /* Apply the animation */
+  height: 7rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  50% {
+    background-position: 100% 50%; /* Middle position */
+  }
+  100% {
+    background-position: 0% 50%; /* End position (loops back) */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .single-card {
+    gap: 1rem;
+  }
+
+  .input-section, .qr-section {
+    width: 48%; /* Slight adjustment for mid-range screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .single-card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .input-section, .qr-section {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .single-card {
+    padding: 1rem;
+  }
+
+  .input-section input[type="url"] {
+    font-size: 0.9rem;
+  }
+}
+
